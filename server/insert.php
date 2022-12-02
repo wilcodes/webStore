@@ -12,40 +12,43 @@ if (!$con) {
     echo("<p> Connection established </p>");
 };
 
-selectDatabase($con, 'test');
+selectDatabase($con, 'testOne');
 
+$uid = $records['uid'];
+$name = $user['name'];
+$lastName = $user['lastname'];
+$address = $user['address'];
+$email = $user['email'];
+$id = $records['id'];
+$size = $records['size'];
+$quantity = $records['quantity'];
+$price = $records['price'];
+$cardholderName = $user['cardholderName'];
+$cardnumber = $user['cardnumber'];
+$month =$user['month'];
+$year = $user['year'];
+$cvv = $user['cvv'];
 
-
-function insertSupply ($connection, $id, $quantity, $size, $title){
-    $orderId = $id;
-
-    $firstName = $title;
-    $lastName = "Colina";
-    $address = $size;
-    $email = "wrca26@gmail.com";
-    $q = $quantity;
-    $price = 45.00;
-
+function insertSupply ($connection, $records, $user){
+    $uid = 'ca55795a-7295-11ed-80f4-b62db7eca773';
+    $name = 'wilfredo';
+    $lastName = 'colina';
+    $address = '1303 el camino';
+    $email = 'wrca26@gmail.com';
+    $id = 'pretty tshirt';
+    $size = 'm';
+    $quantity = '2';
+    $price = '25';
+    $cardholderName = 'wilfredo Colina';
+    $cardnumber = '3456123412341234';
+    $month ='23';
+    $year = '12';
+    $cvv = '123';
     $query = /** @lang text */
         "
-INSERT INTO `orders`(
-    `orderId`,
-    `firstName`,
-    `lastName`,
-    `address`,
-    `email`,
-    `quantity`,
-    `price`
-)
-VALUES(
-    '$orderId',
-    '$firstName',
-    '$lastName',
-    '$address',
-    '$email',
-    '$q',
-    '$price'
-);
+INSERT INTO 
+`RECORDS` (`uid`, `name`, `lastname`, `address`, `email`, `id`, `size`, `quantity`, `price`, `cardholderName`, `cardNumber`, `month`, `year`, `cvv`)
+ VALUES ('$uid', '$name', '$lastName', '$address', '$email', '$id', '$size', '$quantity', '$price', '$cardholderName', '$cardnumber', '$month', '$year', '$cvv')
 ";
 
     if(mysqli_query($connection,$query )){
@@ -57,23 +60,6 @@ VALUES(
 
 };
 
-//insertSupply($con, $query);
 
-if (isset($_POST['test'])){
-//    header('Content-type: text/json');
-//    $arr = json_encode($_POST,true);
-//   echo $arr;
+insertSupply($con);
 
-    //Decode to conver from string json to array and iterate
-   foreach (json_decode($_POST['test'],true) as $key => $val){
-       //each value equals an associate array with the values of each records
-
-       insertSupply($con,$val['uid'], $val['quantity'], $val['size'], $val['id']);
-
-//
-//       }
-       echo '<br/>';
-    }
-
-
-}

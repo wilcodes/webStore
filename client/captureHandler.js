@@ -1,4 +1,5 @@
 const form = document.querySelectorAll('.form');
+const modalNodeShop = document.querySelector('.empty-cart-modal-shop');
 
 function captureHandler(form){
     const formData = new FormData(form);
@@ -23,10 +24,11 @@ function captureHandler(form){
         localStorage.setItem('collection', JSON.stringify([result]))
     }
      console.log(JSON.parse(localStorage.getItem('collection')));
-
+     modalNodeShop.style.display = 'block';
 };
 
 form.forEach(card =>{
+
     card.addEventListener('submit',(event)=> {
         event.preventDefault();
         console.log(event.target);
@@ -37,4 +39,9 @@ form.forEach(card =>{
 });
 
 
+const modalButton = document.querySelector('#modalHandler');
 
+modalButton.addEventListener('click',(e)=>{
+    e.preventDefault();
+    modalNodeShop.style.display = 'none'
+})

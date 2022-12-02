@@ -5,7 +5,7 @@ function captureHandler(form){
     let result = {};
     for (let pair of formData.entries()) {
         result[pair[0]] = pair[1];
-    }
+    };
 
     if( localStorage.getItem('collection')){
         let current =  JSON.parse(localStorage.getItem('collection'));
@@ -29,10 +29,12 @@ function captureHandler(form){
 form.forEach(card =>{
     card.addEventListener('submit',(event)=> {
         event.preventDefault();
+        console.log(event.target);
         captureHandler(event.target);
-        this.event.target.reset();
+
     } );
 
 });
+
 
 

@@ -26,22 +26,22 @@ if (!$con) {
     echo ("<p> Connection established </p>");
 };
 
-$query = "CREATE TABLE IF NOT EXISTS RECORDS(  
-     `uid` CHAR(16) PRIMARY KEY,
-     `name` CHAR(16) NOT NULL, 
-     `lastname` CHAR(16) NOT NULL, 
-     `address` CHAR(255) NOT NULL,
-     `email` CHAR(16) NOT NULL,
-     `id` CHAR(16) NOT NULL,  
-     `size` CHAR(1) NOT NULL, 
-    `quantity` CHAR(1) NOT NULL, 
-     `price` DECIMAL(7,2) NOT NULL,
-    `cardholderName` CHAR(25) NOT NULL,
-    `cardNumber` CHAR(16) NOT NULL,
-    `month` INT(2) NOT NULL, 
-    `year` INT(2) NOT NULL,
-     `cvv` INT(3) NOT NULL
-     );
+$query = "CREATE TABLE `RECORDS` (
+  `uid` varchar(36) NOT NULL,
+  `name` char(16) NOT NULL,
+  `lastname` char(16) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `id` char(16) NOT NULL,
+  `size` char(1) NOT NULL,
+  `quantity` char(1) NOT NULL,
+  `price` varchar(1000) NOT NULL,
+  `cardholderName` varchar(25) NOT NULL,
+  `cardNumber` char(16) NOT NULL,
+  `month` varchar(2) NOT NULL,
+  `year` varchar(2) NOT NULL,
+  `cvv` varchar(3) NOT NULL
+);
      ";
 
 

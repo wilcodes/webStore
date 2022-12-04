@@ -93,7 +93,7 @@ ini_set('display_startup_errors', 1); ?>
 
     </div>
 </div>
-<script src="../client/captureHandler.js"></script>
-<script type="module" src="../client/uidAssign.js"></script>
+<script src="../client/js/captureHandler.js"></script>
+<script type="module" src="../client/js/uidAssign.js"></script>
 </body>
 </html>

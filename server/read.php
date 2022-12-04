@@ -117,7 +117,7 @@ function assignCustomerData (){
 $customerData = assignCustomerData();
 
 
-selectDatabase($con, 'testOne');
+selectDatabase($con, 'threadStore');
 
 function insertSupply ($connection, $records, $user){
 

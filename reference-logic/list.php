@@ -52,7 +52,7 @@ ini_set('display_startup_errors', 1);
 
     </tbody>
 </table>
-<script src="../client/renderRecords.js"></script>
+<script src="../client/js/renderRecords.js"></script>
 <script src="sendRecords.js"></script>
 </body>
 </html>

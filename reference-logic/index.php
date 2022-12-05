@@ -12,15 +12,15 @@ ini_set('display_startup_errors', 1); ?>
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
     />
-   <style>
-       h1{
-           text-align: center;
-           margin: 1rem;
-       }
-   </style>
+    <style>
+        h1 {
+            text-align: center;
+            margin: 1rem;
+        }
+    </style>
 </head>
 <body>
-<h1 >Choose your item</h1>
+<h1>Choose your item</h1>
 
 <div class="container text-center">
     <div class="row">
@@ -31,17 +31,18 @@ ini_set('display_startup_errors', 1); ?>
                     <h5 class="card-title">Item 1</h5>
 
                     <p class="card-text">T shirt One</p>
-                    <form  class="form">
+                    <form class="form">
                         <input type="hidden" value="T-shirt001" name="id">
-                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1" max="5">
+                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1"
+                               max="5">
                         <input type="hidden" value="" class="uid" name="uid">
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="size">
                             <option selected>Open this select menu</option>
                             <option value="small">Small</option>
                             <option value="medium">Medium</option>
                             <option value="large">Large</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary mt-2 ">Add to cart</button>
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-2 ">Add to cart</button>
                     </form>
                 </div>
             </div>
@@ -54,8 +55,9 @@ ini_set('display_startup_errors', 1); ?>
 
                     <p class="card-text">T shirt two</p>
                     <form class="form">
-                        <input type="hidden" value="T-shirt002" name="id" >
-                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1" max="5">
+                        <input type="hidden" value="T-shirt002" name="id">
+                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1"
+                               max="5">
                         <input type="hidden" value="" class="uid" name="uid">
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="size">
                             <option selected>Open this select menu</option>
@@ -77,7 +79,8 @@ ini_set('display_startup_errors', 1); ?>
                     <p class="card-text">T shirt Three</p>
                     <form class="form">
                         <input type="hidden" value="T-shirt003" name="id">
-                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1" max="5">
+                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1"
+                               max="5">
                         <input type="hidden" value="" class="uid" name="uid">
                         <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="size">
                             <option selected>Open this select menu</option>

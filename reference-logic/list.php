@@ -11,17 +11,18 @@ ini_set('display_startup_errors', 1);
     <meta charset="UTF-8">
     <title>Tester</title>
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-        crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
     />
     <style>
         h1 {
             text-align: center;
             margin: 1rem;
         }
-        .button-box{
+
+        .button-box {
             text-align: center;
             margin: 0 auto;
             padding: 1rem;
@@ -37,7 +38,7 @@ ini_set('display_startup_errors', 1);
     </form>
 
 </div>
-<table class="table table-striped" >
+<table class="table table-striped">
     <thead>
     <tr>
         <th scope="col">#id</th>

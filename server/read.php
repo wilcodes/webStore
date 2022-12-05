@@ -11,36 +11,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
 <div class="containerbox">
 
     <nav class="navbar-container">
 
-        <div class="navbar-logo"><a href="index.html"><img src="../client/images/mythreads-logo.png" alt="" /></a></div>
-
+        <div class="navbar-logo"><a href="index.html"><img src="../client/images/mythreads-logo.png" alt=""/></a></div>
 
 
         <ul role="list" class="navbar-links">
 
             <li><a href="shop.html">SHOP</a></li>
-            <li><a href="cart.html"><img src="../client/images/shopping-bag.png" alt="shopping-bag" /></a></li>
+            <li><a href="cart.html"><img src="../client/images/shopping-bag.png" alt="shopping-bag"/></a></li>
 
         </ul>
 
     </nav>
 
 
-
     <div class="heading-container">
         <div class="heading-title">
-            <h2>Color your days</h2><h2>and make your story</h2>
+            <h2>Color your days</h2>
+            <h2>and make your story</h2>
             <button class="shop">Shop Now</button>
         </div>
         <div class="heading-images">
-            <div><img class="heading-image1" src="../client/images/green.jpg" alt="Green shirt being worn" /></div>
-            <div><img class="heading-image2" src="../client/images/blackpeace.jpg" alt="Black peace shirt being worn" /></div>
+            <div><img class="heading-image1" src="../client/images/green.jpg" alt="Green shirt being worn"/></div>
+            <div><img class="heading-image2" src="../client/images/blackpeace.jpg" alt="Black peace shirt being worn"/>
+            </div>
 
         </div>
     </div>
@@ -50,10 +51,10 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="body-images">
-            <div class="image"><img src="../client/images/shirtprinting.jpg" alt="shirt printing machine" /></div>
-            <div class="image"><img src="../client/images/shirts1.jpg" alt="shirts on hangers" /></div>
-            <div class="image"><img src="../client/images/shirts2.jpg" alt="shirts on hangers" /></div>
-            <div class="image"><img src="../client/images/shirts3.jpg" alt="shirts on hangers" /></div>
+            <div class="image"><img src="../client/images/shirtprinting.jpg" alt="shirt printing machine"/></div>
+            <div class="image"><img src="../client/images/shirts1.jpg" alt="shirts on hangers"/></div>
+            <div class="image"><img src="../client/images/shirts2.jpg" alt="shirts on hangers"/></div>
+            <div class="image"><img src="../client/images/shirts3.jpg" alt="shirts on hangers"/></div>
         </div>
     </div>
 
@@ -61,10 +62,9 @@
     <footer>
         <div class="foot">
             <div class="social-logos">
-                <img class="fb-logo" src="../client/images/fb.png" alt="facebook logo" />
-                <img class="instagram-logo" src="../client/images/instagram.png" alt="instagram logo" />
+                <img class="fb-logo" src="../client/images/fb.png" alt="facebook logo"/>
+                <img class="instagram-logo" src="../client/images/instagram.png" alt="instagram logo"/>
             </div>
-
 
 
             <div class="copyright">&#169; 2022 MyThreds</div>
@@ -72,7 +72,9 @@
         </div>
     </footer>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
@@ -95,31 +97,35 @@ if (!$con) {
 
 // Store the information of the user in an associtive array
 
-function assignCustomerData (){
+function assignCustomerData()
+{
     $customerData = array();
 
-    if (isset($_POST)){
+    if (isset($_POST)) {
         //Decode to conver from string json to array and iterate
-        foreach ($_POST as $key => $val){
+        foreach ($_POST as $key => $val) {
             //each value equals an associate array with the values of each records
-            if ($key === 'records'){
-               continue;
-            }else{
+            if ($key === 'records') {
+                continue;
+            } else {
                 $customerData[$key] = $val;
 
             }
-       }
+        }
 
     }
     return $customerData;
-};
+}
+
+;
 
 $customerData = assignCustomerData();
 
 
 selectDatabase($con, 'threadStore');
 
-function insertSupply ($connection, $records, $user){
+function insertSupply($connection, $records, $user)
+{
 
 
     $uid = $records['uid'];
@@ -133,7 +139,7 @@ function insertSupply ($connection, $records, $user){
     $price = $records['price'];
     $cardholderName = $user['cardholderName'];
     $cardnumber = $user['cardnumber'];
-    $month =$user['month'];
+    $month = $user['month'];
     $year = $user['year'];
     $cvv = $user['cvv'];
     $query = /** @lang text */
@@ -143,9 +149,9 @@ INSERT INTO
  VALUES ('$uid', '$name', '$lastName', '$address', '$email', '$id', '$size', '$quantity', '$price', '$cardholderName', '$cardnumber', '$month', '$year', '$cvv')
 ";
 
-    if(mysqli_query($connection,$query )){
+    if (mysqli_query($connection, $query)) {
 
-        echo"(<div class=\"modal-success\">
+        echo "(<div class=\"modal-success\">
         <div class=\"backdrop\">
 
         </div>
@@ -165,8 +171,8 @@ INSERT INTO
             </script>
         </div>
     </div>)";
-    }else {
-        echo"(<div class=\"modal-success\">
+    } else {
+        echo "(<div class=\"modal-success\">
         <div class=\"backdrop\">
 
         </div>
@@ -185,13 +191,15 @@ INSERT INTO
     </div>)";
     };
 
-};
+}
 
-if (isset($_POST['records'])){
+;
 
-    foreach (json_decode($_POST['records'],true) as $key => $val){
+if (isset($_POST['records'])) {
 
-     insertSupply($con,$val, $customerData);
+    foreach (json_decode($_POST['records'], true) as $key => $val) {
+
+        insertSupply($con, $val, $customerData);
 
         echo '<br/>';
     };

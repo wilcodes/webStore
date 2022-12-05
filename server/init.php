@@ -1,7 +1,8 @@
 <?php
 
 
-function createCon() {
+function createCon()
+{
     $username = "root";
     $servername = "localhost";
     //creating connection

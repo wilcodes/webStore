@@ -1,12 +1,15 @@
 <?php
 
-function selectDatabase( $connection, $database){
+function selectDatabase($connection, $database)
+{
 
-    if (mysqli_select_db($connection, $database)){
+    if (mysqli_select_db($connection, $database)) {
         echo('selection completed');
-    }else{
+    } else {
         exit();
     }
 
-};
+}
+
+;
 

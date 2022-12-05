@@ -1,7 +1,7 @@
-    const buttonClear = document.querySelector('.clear');
+const buttonClear = document.querySelector('.clear');
 
 
-    buttonClear.addEventListener('click', ()=>{
-        localStorage.clear();
-        location.reload();
-    });
+buttonClear.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+});

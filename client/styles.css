@@ -326,7 +326,8 @@ label {
 .checkout-modal {
     display: none;
 }
-.modal-update{
+
+.modal-update {
     display: none;
 }
 
@@ -342,7 +343,6 @@ label {
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
-
 
 
 .backdrop {

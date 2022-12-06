@@ -7,20 +7,19 @@ buttonDelete.forEach(button => {
     button.addEventListener('click', (e) => {
         modalUpdate.style.display = 'block';
         const uid = e.target.value;
-        if (uid){
-           localStorage.setItem('currentItem', uid);
+        if (uid) {
+            localStorage.setItem('currentItem', uid);
         }
 
     })
 });
 
 
-
-buttonClose.addEventListener('click',()=>{
+buttonClose.addEventListener('click', () => {
     modalUpdate.style.display = 'none';
 });
 
-function updateData(form){
+function updateData(form) {
     //getting input data and storing them in the result object
     const uid = localStorage.getItem('currentItem');
 
@@ -28,17 +27,19 @@ function updateData(form){
     let result = {};
     for (let pair of formData.entries()) {
         result[pair[0]] = pair[1];
-    };
+    }
+    ;
     // We have uid and the new data. call the collection and update those values!
     let collection = JSON.parse(localStorage.getItem('collection'));
     //iterate over the collection
 
-    collection.forEach((record,i)=>{
+    collection.forEach((record, i) => {
 
-        if (record.uid === uid){
+        if (record.uid === uid) {
             collection[i].size = result.size;
             collection[i].quantity = result.quantity;
-        };
+        }
+        ;
 
     });
 
@@ -47,7 +48,7 @@ function updateData(form){
     location.reload();
 }
 
-formButton.forEach(button=>{
+formButton.forEach(button => {
     button.addEventListener('submit', (e) => {
         e.preventDefault();
 

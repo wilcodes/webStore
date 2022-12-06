@@ -52,7 +52,7 @@
             </div>
         </div>
     </div>
-    <!--  Modal and baackdrop -->
+    <!--  Modal and backdrop -->
 
     <!--  Modal Form -->
     <div class="checkout-modal">
@@ -128,6 +128,36 @@
     </div>
     <!--  Modal Form -->
 
+    <!--  Modal Form on Update -->
+    <div class="modal-update">
+        <div class="backdrop"></div>
+        <div class="unique-modal">
+            <div class="card">
+                <div class="card-header">
+                   Update
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Update the values of your purchase</h5>
+                    <form id="update-form">
+                        <select name="size" class="form-select" required>
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                        </select>
+                        <br>
+                        <label>Quantity:</label>
+                        <input type="number" value="0" name="quantity" class="form-control mb-2" min="1" value="1"
+                               max="5" required>
+                        <button class="btn btn-primary" id="update-model">Update</button>
+                        <button class="btn btn-primary"   id="close-update" >Close modal</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Modal on Update  -->
+
     <main>
         <h1>Verify the information and proceed</h1>
         <div>
@@ -140,6 +170,7 @@
                     <th scope="col">Price</th>
                     <th scope="col">Total</th>
                     <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
 
                 </tr>
                 </thead>

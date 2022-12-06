@@ -326,6 +326,9 @@ label {
 .checkout-modal {
     display: none;
 }
+.modal-update{
+    display: none;
+}
 
 .unique-modal {
     position: fixed;
@@ -339,6 +342,8 @@ label {
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
+
+
 
 .backdrop {
     width: 100%;

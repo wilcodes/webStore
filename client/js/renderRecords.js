@@ -31,7 +31,9 @@ function addChild(id, size, quantity, uid, price, total = price * quantity) {
     const node4 = document.createElement('td');
     const node5 = document.createElement('td');
     const node6 = document.createElement('td');
+    const node7 = document.createElement('td');
     const button = document.createElement('button');
+    const buttonUpdate = document.createElement('button');
 
     node1.textContent = id;
     node2.textContent = selectSize(size);
@@ -39,12 +41,20 @@ function addChild(id, size, quantity, uid, price, total = price * quantity) {
     node4.textContent = `$${price}.00`;
     node5.textContent = `$${total}.00`;
     node1.scope = 'col';
+
     button.textContent = 'Delete record';
     button.className = 'btn btn-danger unique';
     button.value = uid;
-    container.className = 'record-box'
     button.style.margin = '0';
     button.style.padding = '3px';
+
+    //assign values to the update button
+
+    buttonUpdate.textContent = 'Update record';
+    buttonUpdate.className = 'btn btn-secondary';
+    buttonUpdate.value = uid;
+    buttonUpdate.style.margin = '0';
+    buttonUpdate.style.padding = '3px';
 
     parent.appendChild(container);
     container.appendChild(node1);
@@ -53,7 +63,9 @@ function addChild(id, size, quantity, uid, price, total = price * quantity) {
     container.appendChild(node4);
     container.appendChild(node5);
     container.appendChild(node6);
+    container.appendChild(node7);
     node6.appendChild(button);
+    node7.appendChild(buttonUpdate);
 };
 
 if (list) {
